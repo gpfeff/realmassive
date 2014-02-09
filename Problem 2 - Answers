@@ -1,0 +1,14 @@
+git add -A
+
+# This will stage *all* changes to the current directory. I would use add -A over add . or add -u since I will want to stage ALL, including both what I deleted or added(This would change if, for example deleting something fixed the bug, I could just do git add -u)..If I need exactly which file caused the bug(for example somthing as trival as corrupted seed data) I could just use git add #
+
+git commit -m "Fixes Bug Foo by doing A & B and removing C"
+
+#This will commit the changes, and the -m would include a detailed message about what I actually did in that commit. This will be very handy in the future if for some reason this commit causes additional errors/bugs#
+
+git push bug_fix:staging
+
+#Depending on how I pulled down the problem code (in this example in a branch called bug_fix) I'd push those changes up to the staging server/master/whatever the desired server location is#
+
+
+
