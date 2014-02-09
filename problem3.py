@@ -8,8 +8,7 @@ sum_data = sum(data)
 data_length = len(data)
 #Sets variable, 'data_length', equal to the length of the array(how many numbers are in there)#
 
-data_mean = float(sum_data / data_length)
-###NEED TO GET TO DECIMAL/FLOAT###
+data_mean = float(sum_data)/data_length
 #Computes the mean by dividing the sum of all numbers in 'data' by the length of the array & converts to float#
 
 
