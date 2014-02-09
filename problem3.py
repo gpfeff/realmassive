@@ -8,8 +8,9 @@ sum_data = sum(data)
 data_length = len(data)
 #Sets variable, 'data_length', equal to the length of the array(how many numbers are in there)#
 
-data_mean = sum_data / data_length
-#Computes the mean by dividing the sum of all numbers in 'data' by the length of the array#
+data_mean = float(sum_data / data_length)
+###NEED TO GET TO DECIMAL/FLOAT###
+#Computes the mean by dividing the sum of all numbers in 'data' by the length of the array & converts to float#
 
 
 first_value = data[9]
@@ -20,8 +21,28 @@ data_median = (first_value + second_value) / 2
 
 
 
-print "The median of the array is ", data_median
+def mode(data):
+total_count = 0
+data_mode = None
+for i in data:
+    if data.count(i) > total_count:
+        maxcount = data.count(i)
+        data_mode = i
+return data_mode
+
+
+
+
+
+
+
+
+
+
+
 print "The mean of the array is ", data_mean
+print "The median of the array is ", data_median
+print "The mode of the array is ", data_mode
 
 
 
