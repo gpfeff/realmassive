@@ -10,29 +10,26 @@ data_length = len(data)
 data_mean = float(sum_data)/data_length
 #Computes the mean by dividing the sum of all numbers in 'data' by the length of the array & converts to float#
 
+data.sort()
+first_value = data[9]
+second_value = data[10]
+#Given data_length = 20, in order to find the median of data I'll need to find the mean of the two middle numbers#
 
-# first_value = data[9]
-# second_value = data[10]
-# #Given data_length = 20, in order to find the median of data I'll need to find the mean of the two middle numbers#
+data_median = (first_value + second_value) / 2
 
-# data_median = (first_value + second_value) / 2
+from collections import Counter
+def mode(values):
+  count = Counter(values)
+  winner = max(count.values())
+  return [k for k,v in count.items() if v == winner]
 
 
-
-# def mode(data):
-# total_count = 0
-# data_mode = None
-# for i in data:
-#     if data.count(i) > total_count:
-#         maxcount = data.count(i)
-#         data_mode = i
-# return data_mode
 
 
 
 print "The mean of the array is ", data_mean
-# print "The median of the array is ", data_median
-# print "The mode of the array is ", data_mode
+print "The median of the array is ", data_median
+print "The mode of the array is ", mode(data)
 
 
 
