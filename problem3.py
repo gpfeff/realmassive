@@ -48,8 +48,10 @@ else:
 
 
 standard_deviation = numpy.std(data)
-#Uses the numpy library to calculate#
+#Uses the numpy library to calculate standard_deviation#
 print "The standard deviation of the array is :", standard_deviation
-
+variance = numpy.var(data)
+#Uses the numpy library to calculate variance#
+print "The variance of the array is :", variance
 
 
