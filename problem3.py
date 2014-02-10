@@ -45,6 +45,10 @@ else:
 
 
 
+import numpy
+standard_deviation = numpy.std(data)
+#Uses the numpy library to calculate#
+print "The standard deviation of the array is :", standard_deviation
 
 
 
